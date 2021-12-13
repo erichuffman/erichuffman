@@ -1,0 +1,24 @@
+.main-menu {
+  margin: 0 auto;
+  max-width: $width-lg;
+}
+
+.main-menu__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  max-width: $width-lg;
+  padding: 24px 12px;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li {
+    margin-left: 16px;
+  }
+}

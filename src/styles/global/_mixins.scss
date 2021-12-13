@@ -1,0 +1,15 @@
+// Breakpoint mixin.
+//
+// Expects $viewport to either be a number: 200px
+// Or a string: 'max-width: 300px'
+@mixin breakpoint($viewport) {
+  @if type-of($viewport) == number {
+    @media screen and (min-width: $viewport) {
+      @content;
+    }
+  } @else {
+    @media screen and ($viewport) {
+      @content;
+    }
+  }
+}

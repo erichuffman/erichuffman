@@ -1,0 +1,36 @@
+.contacts-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-links__item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 16px 16px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 16px;
+  }
+}
+
+.contacts-links__link {
+  color: $color-gray-mid;
+  display: flex;
+  font-size: 4.0rem;
+  text-decoration: none;
+}
+
+.contacts-links__link-text {
+  height: 0;
+  left: -1000em;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}

@@ -1,0 +1,53 @@
+.header {
+  background-color: $color-bright-blue;
+  overflow: hidden;
+  position: relative;
+
+  .main-menu {
+    left: -1000em;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.header__icon {
+  background-image: url('../assets/HuskyWolf.svg');
+  background-position: center 10px;
+  background-repeat: no-repeat;
+  background-size: 325px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .eye {
+    background-color: $color-bright-blue;
+    border-radius: 100%;
+    height: 4px;
+    left: calc(50% - 78px);
+    position: absolute;
+    top: 113px;
+    transition: transform 250ms ease-in;
+    width: 8px;
+  }
+
+  .eye:last-child {
+    left: calc(50% - 40px);
+    top: 109px;
+  }
+
+  &:hover .eye {
+    transform: translateX(5px);
+  }
+
+  &:hover .eye:last-child {
+    transform: translateX(8px);
+  }
+}
+
+.header__heading {
+  height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 250px;
+  width: 200px;
+}
