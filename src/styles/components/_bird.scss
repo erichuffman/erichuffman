@@ -1,0 +1,140 @@
+@keyframes topbounce {
+  from {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(40deg);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+
+  to {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(-40deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  to {
+    transform: rotate(-40deg);
+  }
+}
+
+.bird {
+  position: absolute;
+  left: -1000em;
+}
+
+.bird__label {
+  animation-duration: 1s;
+  animation-name: topbounce;
+  animation-iteration-count: 3;
+  cursor: pointer;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 5%;
+  transition: left 500ms ease-out;
+  width: 150px;
+  
+  @media (min-width: 700px) {
+    height: 140px;
+    left: calc(50% - 325px);
+    top: 25%;
+  }
+
+  .bird:checked + & {
+    left: calc(95% - 125px);
+
+    @media (min-width: 700px) {
+      left: calc(50% + 120px);
+    }
+  }
+
+  &::after {
+    background-image: url('../assets/WrenBody.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+.bird__label-text {
+  height: 0;
+  left: -1000em;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+
+.bird__wing {
+  animation-duration: .25s;
+  animation-name: rotate-left;
+  animation-iteration-count: infinite;
+  background-image: url('../assets/WrenWingLeft.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 35px;
+  left: -5px;
+  position: absolute;
+  width: 70px;
+  top: 25px;
+  transform-origin: 100%;
+  z-index: 3;
+  
+  @media (min-width: 700px) {
+    height: 40px;
+  }
+}
+
+.bird__wing:last-child {
+  animation-duration: .25s;
+  animation-name: rotate-right;
+  animation-iteration-count: infinite;
+  background-image: url('../assets/WrenWingRight.svg');
+  left: auto;
+  right: -5px;
+  top: 30px;
+  transform-origin: 0%;
+  z-index: 1;
+  
+  @media (min-width: 700px) {
+    right: -15px;
+  }
+}
