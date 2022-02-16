@@ -64,6 +64,15 @@
   top: 5%;
   transition: left 500ms ease-out;
   width: 150px;
+
+  .bird:focus + & {
+    border: 4px solid rgba(white, 0.75);
+    border-radius: 100%;
+  }
+
+  .pause-button:checked + .pause-button__label + .bird + & {
+    animation: none;
+  }
   
   @media (min-width: 700px) {
     height: 140px;
@@ -120,6 +129,10 @@
   
   @media (min-width: 700px) {
     height: 40px;
+  }
+
+  .pause-button:checked + .pause-button__label + .bird + .bird__label & {
+    animation: none;
   }
 }
 

@@ -11,6 +11,13 @@
   <body>
     <header class="header" aria-label="Page header">
       <div class="header__icon">
+        <input id="pause-button" type="checkbox" class="pause-button" />
+        <label for="pause-button" class="pause-button__label">
+          <span class="fas fa-pause pause-button__icon pause-button__icon--pause" aria-hidden="true"></span>
+          <span class="fas fa-play pause-button__icon pause-button__icon--play" aria-hidden="true"></span>
+          <span class="pause-button__pause-text">Pause</span>
+          <span class="pause-button__play-text">Play</span>
+        </label>
         <input id="bird-1" type="checkbox" class="bird" />
         <label for="bird-1" class="bird__label">
           <span class="bird__label-text">Click on me to make me fly.</span>
